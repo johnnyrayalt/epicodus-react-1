@@ -18,6 +18,7 @@
     "font-awesome": "^4.7.0",
     "i": "^0.3.6",
     "node-sass": "^4.9.0",
+    "normalize.css": "^8.0.0",
     "npm": "^6.1.0",
     "prop-types": "^15.5.10",
     "react": "^15.5.4",
