@@ -46,9 +46,12 @@ function Header() {
         border-bottom-left-radius:5px;
         border-bottom-right-radius:5px;
         border-bottom: 8px solid #af4134;
+        margin-bottom:-8px;
+      }
+
+      .block1, .block2 {
         border-left: 8px solid #af4134;
         border-right: 8px solid #af4134;
-        margin-bottom:-8px;
       }
 
       .block1 {
@@ -60,13 +63,16 @@ function Header() {
       .block2 {
         width: 75%;
         background-color: #007291;
-        z-index:2;
+        z-index:50;
+        position:relative;
       }
 
       .block3 {
         width: 60%;
         background-color: #af4134;
-        z-index:3;
+        box-shadow: 0 0 8px 8px #fcedb2;
+        z-index:1;
+        position:relative;
       }
           `}</style>
     </div>
