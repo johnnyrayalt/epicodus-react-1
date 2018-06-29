@@ -9,8 +9,8 @@ function BeerDetails(props) {
         <h4 className='brand'>{props.brand}</h4>
       </div>
       <div className='type'>{props.type}</div>
-      <div className='price'>{props.price}</div>
       <div className='alcContent'>{props.alcContent}</div>
+      <div className='price'>{props.price}</div>
       <div className='pints'>{props.price}</div>
     </div>
   );
@@ -20,8 +20,8 @@ BeerDetails.propTypes = {
   name: PropTypes.string.isRequired,
   brand: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired,
   alcContent: PropTypes.number.isRequired,
+  price: PropTypes.number,
   pints: PropTypes.number
 };
 
