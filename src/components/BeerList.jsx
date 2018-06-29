@@ -45,6 +45,8 @@ function BeerList() {
             brand={beer.brand}
             type={beer.type}
             alcContent={beer.alcContent}
+            pints={beer.pints}
+            price={beer.price}
             key={index} />
         )}
       </div>
