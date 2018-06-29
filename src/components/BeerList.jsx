@@ -50,6 +50,11 @@ function BeerList() {
             key={index} />
         )}
       </div>
+      <style jsx>{`
+        .container {
+          padding-top:230px;
+        }
+            `}</style>
     </div>
   );
 }
