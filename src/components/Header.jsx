@@ -9,7 +9,7 @@ function Header() {
       <div className='block2 center'></div>
       <div className='block3 center'></div>
 
-    <style jsx>{`
+      <style jsx>{`
       .containerHeader {
         width:100%;
         position:fixed;

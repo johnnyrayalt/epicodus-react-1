@@ -5,12 +5,12 @@ function Home() {
   return(
     <div className='container'>
       <Link className='link' to='/beerlist' style={{ textDecoration: 'none' }}>
-      <div className='centerSplash'>
-        <div className='welcomeHead'>Welcome!</div>
-        <div className='welcomeSubHead'>
+        <div className='centerSplash'>
+          <div className='welcomeHead'>Welcome!</div>
+          <div className='welcomeSubHead'>
           Let's see what's on tap
+          </div>
         </div>
-      </div>
       </Link>
       <style jsx>{`
         .centerSplash {

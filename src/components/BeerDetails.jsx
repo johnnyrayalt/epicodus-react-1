@@ -19,7 +19,7 @@ function BeerDetails(props) {
           <div className='pints'>{props.pints} Pints left</div>
         </div>
       </div>
-    <style jsx>{`
+      <style jsx>{`
     .wrapper {
       border: 5px solid #007291;
       border-radius:5px;
@@ -96,7 +96,7 @@ function BeerDetails(props) {
     }
         `}</style>
 
-  </div>
+    </div>
   );
 }
 
