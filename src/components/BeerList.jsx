@@ -39,13 +39,15 @@ var masterBeersList = [
 function BeerList() {
   return(
     <div className='container'>
-      {masterBeersList.map((beer, index) =>
-        <BeerDetails name={beer.name}
-          brand={beer.brand}
-          type={beer.type}
-          alcContent={beer.alcContent}
-          key={index} />
-      )}
+      <div className='beer'>
+        {masterBeersList.map((beer, index) =>
+          <BeerDetails name={beer.name}
+            brand={beer.brand}
+            type={beer.type}
+            alcContent={beer.alcContent}
+            key={index} />
+        )}
+      </div>
     </div>
   );
 }
