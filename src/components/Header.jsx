@@ -1,9 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Header() {
   return(
     <div className='containerHeader'>
-      <h3 className='headerMain center'>Digital Poor</h3>
+      <Link className='link' to='/beerlist' style={{ textDecoration: 'none' }}>
+        <h3 className='headerMain center'>Digital Poor</h3>
+      </Link>
       <p className='headerText center'>Drink me</p>
       <div className='block1 center'></div>
       <div className='block2 center'></div>
