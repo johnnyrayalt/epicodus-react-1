@@ -36,32 +36,38 @@ function NewBeerForm(props) {
           type='text'
           id='name'
           placeholder='Beer Name'
+          required
           ref={(input) => {name = input;}}/>
         <input className='inputField'
           type='text'
           id='brand'
           placeholder='Beer Manufacturer'
+          required
           ref={(input) => {brand = input;}}/>
         <input className='inputField'
           type='text'
           id='type'
           placeholder='What type of beer is it?'
+          required
           ref={(input) => {type = input;}}/>
         <input className='inputField'
           type='number'
           id='alcContent'
-          placeholder='What is this beers alcohol percentage content?'
+          placeholder='What is this beers alcohol % content?'
+          required
           ref={(input) => {alcContent = input;}}/>
         <input className='inputField'
           type='number'
           id='price'
           placeholder='Price'
+          required
           ref={(input) => {price = input;}}/>
         <input className='inputField'
           type='number'
           id='pints'
           placeholder='How many pours left?'
           default='124'
+          required
           ref={(input) => {pints = input;}}/>
         <button type='submit' className='button'>Add</button>
       </form>
@@ -71,11 +77,48 @@ function NewBeerForm(props) {
           padding-top:200px;
         }
 
-        .inputField {
+        .inputField, .button {
           display:flex;
           margin: 5% auto;
+          border: 5px solid #df6a3b;
+          background-color:#fcedb2;
+          font-family: 'Righteous', cursive;
+          -webkit-text-stroke: 1px #71351a;
+          color:#df6a3b;
+          letter-spacing:1.5px;
+          border-radius:5px;
         }
 
+        .inputField {
+          width:400px;
+          height:50px;
+          font-size:18px;
+        }
+
+        .inputField::placeholder {
+          color:#df6a3b;
+        }
+
+        .button {
+          padding:0;
+          margin:auto;
+          width:100px;
+          height:50px;
+          display:block;
+          font-size:22px;
+          transition: all 0.2s ease-out;
+        }
+
+        .button:hover {
+          cursor:pointer;
+          background-color:#df6a3b;
+          color:#fcedb2;
+          font-size:22px;
+          width:110px;
+          height:60px;
+          transition: all 0.2s ease;
+          font-size:26px;
+        }
       `}</style>
 
     </div>
