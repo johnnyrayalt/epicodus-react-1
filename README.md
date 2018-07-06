@@ -14,6 +14,8 @@
 
 > 1pm : look up dynamic routing
 
+> Week 2 3:30pm: 2 hours researching redirecting routes after submitting form - no luck
+
 ###### THOUGHTS
 
 > Angular vs React: I'm finding that for smaller applications React has major benefits over Angular in terms of learning curve, and the time it takes to get a skeleton up and running is significantly less in React. I find that the rigidity of Angular can be far more difficult to work with than the sparseness of React.
