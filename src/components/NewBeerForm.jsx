@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
+import { Link } from 'react-router-dom';
 
 function NewBeerForm(props) {
   let name = null;
@@ -36,40 +37,42 @@ function NewBeerForm(props) {
           type='text'
           id='name'
           placeholder='Beer Name'
-          required
+
           ref={(input) => {name = input;}}/>
         <input className='inputField'
           type='text'
           id='brand'
           placeholder='Beer Manufacturer'
-          required
+
           ref={(input) => {brand = input;}}/>
         <input className='inputField'
           type='text'
           id='type'
           placeholder='What type of beer is it?'
-          required
+
           ref={(input) => {type = input;}}/>
         <input className='inputField'
           type='number'
           id='alcContent'
           placeholder='What is this beers alcohol % content?'
-          required
+
           ref={(input) => {alcContent = input;}}/>
         <input className='inputField'
           type='number'
           id='price'
           placeholder='Price'
-          required
+
           ref={(input) => {price = input;}}/>
         <input className='inputField'
           type='number'
           id='pints'
           placeholder='How many pours left?'
           default='124'
-          required
+
           ref={(input) => {pints = input;}}/>
-        <button type='submit' className='button'>Add</button>
+        <Link className='link' to='/beerlist'>
+          <button type='submit' className='button'>Add</button>
+        </Link>
       </form>
 
       <style jsx>{`
@@ -119,6 +122,7 @@ function NewBeerForm(props) {
           transition: all 0.2s ease;
           font-size:26px;
         }
+
       `}</style>
 
     </div>
@@ -126,7 +130,8 @@ function NewBeerForm(props) {
 }
 
 NewBeerForm.propTypes = {
-  onNewBeerCreation: PropTypes.func
+  onNewBeerCreation: PropTypes.func,
+  handleRedirectOnAddingBeer: PropTypes.func,
 };
 
 export default NewBeerForm;
