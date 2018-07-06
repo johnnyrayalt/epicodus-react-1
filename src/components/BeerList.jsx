@@ -5,30 +5,39 @@ import { Link } from 'react-router-dom';
 
 function BeerList(props) {
   return(
-    <div className='container'>
-      <div className='beer'>
-        {props.showBeerList.map((beer, index) =>
-          <BeerDetails name={beer.name}
-            brand={beer.brand}
-            type={beer.type}
-            alcContent={beer.alcContent}
-            pints={beer.pints}
-            price={beer.price}
-            key={index} />
-        )}
-      </div>
+    <div className='outerBeerListContainer'>
+      <div className='innerBeerListContainer'>
+        <div className='beer'>
+          {props.showBeerList.map((beer, index) =>
+            <BeerDetails name={beer.name}
+              brand={beer.brand}
+              type={beer.type}
+              alcContent={beer.alcContent}
+              pints={beer.pints}
+              price={beer.price}
+              key={index} />
+          )}
+        </div>
 
-      <div className='addBeerContainer'>
-        <Link className='link' to='/newbeer' style={{ textDecoration: 'none' }}>
-          <h3 className='addBeerButton'>Add Beer</h3>
-        </Link>
+        <div className='addBeerContainer'>
+          <Link className='link' to='/newbeer' style={{ textDecoration: 'none' }}>
+            <h3 className='addBeerButton'>Add Beer</h3>
+          </Link>
+        </div>
       </div>
 
       <style jsx>{`
-        .container {
+        .outerBeerListContainer {
           padding-top:230px;
-          max-width:600px;
           margin: auto;
+          overflow:hidden;
+          width:100%;
+        }
+
+        .innerBeerListContainer {
+          padding-bottom:100px;
+          max-width:600px;
+          margin:auto;
         }
 
         .addBeerButton {
@@ -52,7 +61,6 @@ function BeerList(props) {
           color:#fcedb2;
           font-size:22px;
           width:1000%;
-          overflow:hidden;
           transition: all 2s ease;
           font-size:33px;
         }

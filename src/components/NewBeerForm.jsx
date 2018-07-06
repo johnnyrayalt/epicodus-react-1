@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
-import { Link } from 'react-router-dom';
 
 function NewBeerForm(props) {
   let name = null;
@@ -30,6 +29,7 @@ function NewBeerForm(props) {
     pints.value = '';
   }
 
+
   return (
     <div className='newBeerFormContainer'>
       <form className='newBeerForm' onSubmit={handleAddingNewBeerToList}>
@@ -37,52 +37,57 @@ function NewBeerForm(props) {
           type='text'
           id='name'
           placeholder='Beer Name'
-
+          required
           ref={(input) => {name = input;}}/>
         <input className='inputField'
           type='text'
           id='brand'
           placeholder='Beer Manufacturer'
-
+          required
           ref={(input) => {brand = input;}}/>
         <input className='inputField'
           type='text'
           id='type'
           placeholder='What type of beer is it?'
-
+          required
           ref={(input) => {type = input;}}/>
         <input className='inputField'
           type='number'
           id='alcContent'
           placeholder='What is this beers alcohol % content?'
-
+          required
           ref={(input) => {alcContent = input;}}/>
         <input className='inputField'
           type='number'
           id='price'
           placeholder='Price'
-
+          required
           ref={(input) => {price = input;}}/>
         <input className='inputField'
           type='number'
           id='pints'
           placeholder='How many pours left?'
+          required
           default='124'
-
           ref={(input) => {pints = input;}}/>
-        <Link className='link' to='/beerlist' style={{ textDecoration: 'none' }}>
-          <button type='submit' className='button'>Add</button>
-        </Link>
+        <button type='submit' className='button'>Add</button>
       </form>
 
       <style jsx>{`
         .newBeerFormContainer {
-          padding-top:200px;
+          padding-top:220px;
+          width:100%;
+          overflow:hidden;
+        }
+
+        .newBeerForm {
+          max-width:600px;
+          margin:auto;
         }
 
         .inputField, .button {
-          display:flex;
-          margin: 5% auto;
+          margin-top: 20px;
+          margin-bottom: 20px;
           border: 5px solid #df6a3b;
           background-color:#fcedb2;
           font-family: 'Righteous', cursive;
@@ -90,10 +95,11 @@ function NewBeerForm(props) {
           color:#df6a3b;
           letter-spacing:1.5px;
           border-radius:5px;
+          display:flex;
         }
 
         .inputField {
-          width:400px;
+          width:600px;
           height:50px;
           font-size:18px;
         }
@@ -103,24 +109,23 @@ function NewBeerForm(props) {
         }
 
         .button {
-          padding:0;
-          margin:auto;
           width:100px;
           height:50px;
-          display:block;
           font-size:22px;
           transition: all 0.2s ease-out;
+          margin-bottom:100px;
         }
 
         .button:hover {
           cursor:pointer;
-          background-color:#df6a3b;
+          background-color:#9dc183;
+          border: 5px solid #9dc183;
           color:#fcedb2;
           font-size:22px;
-          width:110px;
-          height:60px;
-          transition: all 0.2s ease;
-          font-size:26px;
+          width:1000%;
+          overflow:hidden;
+          transition: all 2s ease;
+          font-size:33px;
         }
 
       `}</style>

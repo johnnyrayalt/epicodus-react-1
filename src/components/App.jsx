@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import Header from './Header';
 import BeerList from './BeerList';
 import Home from './Home';
@@ -11,7 +11,6 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      redirectOnAddingBeer: false,
       masterBeersList: [
         {
           name: 'Alt Bier',
@@ -48,17 +47,12 @@ class App extends React.Component {
       ]
     };
     this.handleAddingNewBeerToList = this.handleAddingNewBeerToList.bind(this);
-    this.handleRedirectOnAddingBeer = this.handleRedirectOnAddingBeer.bind(this);
   }
 
   handleAddingNewBeerToList(newBeer) {
     var newMasterBeersList = this.state.masterBeersList.slice();
     newMasterBeersList.push(newBeer);
     this.setState({masterBeersList: newMasterBeersList});
-  }
-
-  handleRedirectOnAddingBeer() {
-    this.setState({redirectOnAddingBeer: true});
   }
 
   render() {
