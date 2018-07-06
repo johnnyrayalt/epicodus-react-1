@@ -8,7 +8,7 @@ function NotFound(props){
       <h2>The page {props.location.pathname} does not exist!</h2>
       <h3>Would you like to see whats <Link to='/beerlist' style={{ textDecoration: 'none', color: '#007291' }}>on tap</Link> instead?</h3>
 
-    <style jsx>{`
+      <style jsx>{`
         .center {
           text-align:center;
           margin:auto;
