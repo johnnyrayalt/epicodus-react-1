@@ -70,7 +70,7 @@ function NewBeerForm(props) {
           default='124'
 
           ref={(input) => {pints = input;}}/>
-        <Link className='link' to='/beerlist'>
+        <Link className='link' to='/beerlist' style={{ textDecoration: 'none' }}>
           <button type='submit' className='button'>Add</button>
         </Link>
       </form>
