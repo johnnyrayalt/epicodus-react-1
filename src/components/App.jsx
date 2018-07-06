@@ -4,6 +4,7 @@ import Header from './Header';
 import BeerList from './BeerList';
 import Home from './Home';
 import NotFound from './NotFound';
+import NewBeerForm from './NewBeerForm';
 
 class App extends React.Component {
 
@@ -45,17 +46,28 @@ class App extends React.Component {
         }
       ]
     };
+    this.handleAddingNewBeerToList = this.handleAddingNewBeerToList.bind(this);
+  }
+
+  handleAddingNewBeerToList(newBeer) {
+    var newMasterBeersList = this.state.masterBeersList.slice();
+    newMasterBeersList.push(newBeer);
+    this.setState({masterBeersList: newMasterBeersList});
   }
 
   render() {
     return(
       <div>
-        <Header/>
+        <Header />
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/beerlist' render={()=>
             <BeerList
               showBeerList={this.state.masterBeersList} />}
+          />
+          <Route path='/newbeer' render={()=>
+            <NewBeerForm
+              onNewBeerCreation={this.handleAddingNewBeerToList} />}
           />
           <Route path='*' component={NotFound} />
         </Switch>
