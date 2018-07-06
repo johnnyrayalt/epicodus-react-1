@@ -6,9 +6,9 @@ function NewBeerForm(props) {
   let name = null;
   let brand = null;
   let type = null;
-  let alcContent = null;
-  let price = null;
-  let pints = null;
+  let alcContent = NaN;
+  let price = NaN;
+  let pints = NaN;
 
   function handleAddingNewBeerToList(event) {
     event.preventDefault();
@@ -31,44 +31,51 @@ function NewBeerForm(props) {
 
   return (
     <div className='newBeerFormContainer'>
-      <form onSubmit={handleAddingNewBeerToList}>
-        <input
+      <form className='newBeerForm' onSubmit={handleAddingNewBeerToList}>
+        <input className='inputField'
           type='text'
           id='name'
           placeholder='Beer Name'
           ref={(input) => {name = input;}}/>
-        <input
+        <input className='inputField'
           type='text'
           id='brand'
           placeholder='Beer Manufacturer'
           ref={(input) => {brand = input;}}/>
-        <input
+        <input className='inputField'
           type='text'
           id='type'
           placeholder='What type of beer is it?'
           ref={(input) => {type = input;}}/>
-        <input
-          type='text'
+        <input className='inputField'
+          type='number'
           id='alcContent'
           placeholder='What is this beers alcohol percentage content?'
           ref={(input) => {alcContent = input;}}/>
-        <input
-          type='text'
+        <input className='inputField'
+          type='number'
           id='price'
           placeholder='Price'
           ref={(input) => {price = input;}}/>
-        <input
-          type='text'
+        <input className='inputField'
+          type='number'
           id='pints'
           placeholder='How many pours left?'
           default='124'
           ref={(input) => {pints = input;}}/>
+        <button type='submit' className='button'>Add</button>
       </form>
 
       <style jsx>{`
         .newBeerFormContainer {
           padding-top:200px;
         }
+
+        .inputField {
+          display:flex;
+          margin: 5% auto;
+        }
+
       `}</style>
 
     </div>
