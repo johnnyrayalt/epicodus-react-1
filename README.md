@@ -1,4 +1,4 @@
-# Digital Poor
+# Digital Poor v.2
 
 **By Johnny Ray Alt**
 
@@ -24,7 +24,7 @@
 
 1. Install Node.js on local machine.
 
-2. 
+2.
 ```
 $ git clone https://github.com/johnnyrayalt/epicodus-react-1.git \
 $ cd epicodus-react-1 \
@@ -49,7 +49,6 @@ None.
 ### Component/Route Structure
 
 ![Component Tree](src/assets/img/comptree2.jpg?raw=true "Component Tree")
-
 
 ## License
 
