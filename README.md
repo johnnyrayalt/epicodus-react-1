@@ -24,10 +24,12 @@
 
 1. Install Node.js on local machine.
 
-2. ```
+2. 
+```
 $ git clone https://github.com/johnnyrayalt/epicodus-react-1.git \
 $ cd epicodus-react-1 \
-$ npm install ```
+$ npm install
+```
 
 3. Run `$ npm run start` to build project and launch on localhost:8080
 
@@ -46,7 +48,7 @@ None.
 
 ### Component/Route Structure
 
-![Component Tree](src/assets/img/comptree.jpg?raw=true "Component Tree")
+![Component Tree](src/assets/img/comptree2.jpg?raw=true "Component Tree")
 
 
 ## License
